@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% block the_body %}
+
+    <div class="card mx-auto text-justify-content">
+        <div class="card-body">
+            <h5 class="card-title">Eploratory Data Analysis of Data Capture From February 29, 2020 Up To Date.</h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget ligula vel diam mollis auctor. Proin ultricies gravida auctor. Aenean accumsan porta sem. Sed pellentesque suscipit dolor a elementum. Vestibulum consectetur commodo ligula, at eleifend ex. Nulla efficitur ligula ac erat condimentum posuere. Morbi massa ante, faucibus fermentum massa et, ultricies tempor tellus. Phasellus pretium lacus sed ligula euismod, et suscipit erat posuere. Phasellus consectetur leo id sem porta vestibulum. Nam et pulvinar elit. Nullam sed erat ipsum. Donec egestas sagittis nisl. Vestibulum id vulputate purus. Integer leo risus, tristique at neque ac, pellentesque rhoncus turpis. Vestibulum lacinia tellus eu velit egestas sodales. Aenean eget est non nunc auctor finibus eget nec sapien.
+
+                Vivamus vitae dapibus tellus, id varius justo. Fusce congue, metus quis viverra vulputate, sem dolor pretium ex, nec viverra augue ligula vitae neque. Aenean sed accumsan lacus. Nulla odio urna, aliquam elementum ultricies nec, aliquet at nisi. Morbi in metus ut urna pulvinar vehicula vel commodo lectus. Nulla facilisi. Etiam a lacinia lacus, eu fringilla quam. Praesent pulvinar ex vel turpis rutrum laoreet. Aenean interdum, ex vel scelerisque egestas, felis justo hendrerit ex, in malesuada mauris diam in urna.
+
+            </p>
+        </div>   
+    </div>
+
+
+
+    <div class="card mx-auto text-center">
+        <div class="card-body">
+            <h5 class="card-title">Visualizations</h5>
+            <p class="card-text">
+                <label for="plots">Choose a Visualization:</label>
+               <select class="form-control" name="plot" id="plot" hx-post="/displayvisual" hx-target="#plots" hx-indicator=".htmx-indicator">
+                    {% for option in options %}
+                        <option value="{{ option.value }}">{{ option.label }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+
+            <hr />
+
+            <div id="plots">
+                <h2>Visualization Here!!!</h2>
+                
+            </div>
+        </div>   
+    </div>
+
+
+{% endblock %}

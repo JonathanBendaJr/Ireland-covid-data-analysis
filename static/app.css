@@ -1,0 +1,49 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: hsl(211, 74%, 62%);
+    transform: scale(1.1); 
+    transition: transform 0.3s;
+    font-weight: bold;  
+    transition: font-weight 0.3s;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+
+}
+
+.navbar-brand:hover{
+    transform: scale(1.1);  
+    transition: transform 0.3s;
+    font-weight: bold;  
+    transition: font-weight 0.3s;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+.card {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    width: 90%;    
+}
+
+hr{
+    width: 90%;
+}
