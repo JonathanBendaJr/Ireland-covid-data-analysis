@@ -1,9 +1,9 @@
-URL = "https://opendatageohive.hub.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0.csv?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D"
+#URL = "https://opendatageohive.hub.arcgis.com/datasets/d8eb52d56273413b84b0187a4e9117be_0.csv?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D"
 import pandas as pd
 
 
 def get_covid_records():
-    df = pd.read_csv(URL)
+    df = pd.read_csv("covid_data.csv")
     df = df.drop(['X', 'Y','Date', 'CovidCasesConfirmed','TotalConfirmedCovidCases', 'DeathsCumulative_DOD','CommunityTransmission', 'CloseContact',
        'SevenDayAvg_Cases','ConfirmedCovidDeaths', 'TotalCovidDeaths','ClustersNotified','TravelAbroad', 'FID', 'Median_Age',], axis=1)
     
@@ -77,7 +77,5 @@ def get_covid_records():
     
     tidy_data = melted_data.copy()
     
-    #tidy_data=tidy_data.drop(['Unnamed: 0'], axis=1)
-    #tidy_data.to_csv("Tidy_Covid_Data.csv")
     
     return tidy_data
