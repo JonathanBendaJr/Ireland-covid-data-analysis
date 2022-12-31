@@ -1,3 +1,6 @@
+# Please Note that this file is schedule to run daily as task on python anywhere.
+
+
 import requests, os
 from bs4 import BeautifulSoup
 
